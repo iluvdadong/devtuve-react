@@ -1,0 +1,39 @@
+.header {
+    display: flex;
+    height: 4rem; /* 부모와 상관없이 고정값 */
+    padding: 0.5em 1em;
+    background: black;
+    color:white;
+
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    margin-right: 1em;
+}
+
+.img {
+    padding: 0.5em;
+}
+
+.input {
+    flex-basis: 100%;
+    font-size:1.2rem;
+    outline: 0;
+    border: none;
+    padding: 0.5em;
+}
+
+.button {
+    background: rgb(43, 43, 43);
+    border:none; 
+    box-shadow:none; 
+    border-radius:0;
+    cursor:pointer;
+}
+
+.buttonImg {
+    padding: 0.5em;
+    height: 100%;
+}
