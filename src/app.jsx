@@ -3,28 +3,28 @@ import styles from './app.module.css';
 import SearchHeader from './components/search/search_header';
 import VideoList from './components/video_list/video_list';
 
-function App() {
+function App({ youtube }) {
   const [videos, setVideos] = useState([]);
 
-  useEffect(() => {
-    const requestOptions = {
-      method: 'GET',
-      redirect: 'follow',
-    }; //클래스형으로 만듬..
+  // Youtube class의 instance인 youtube 내부 API 함수 호출
+  const search = query => {
+    youtube
+      .search(query)
+      .then(videos => setVideos(videos));
+  };
 
-    fetch(
-      'https://www.googleapis.com/youtube/v3/videos?part=snippet&chart=mostPopular&maxResults=25&key=AIzaSyAtrSZkopq--QXlpEYQ5SrM9Kg5TZlZMl0',
-      requestOptions
-    )
-      .then(response => response.json())
-      .then(result => setVideos(result.items))
-      .catch(error => console.log('error', error));
+  //useEffect가 아니라 네트워킹하는 것을 함수로 만듬
+  useEffect(() => {
+    youtube
+      .mostPopular()
+      .then(videos => setVideos(videos));
+
   }, []);
 
   return (
     <>
       <div className={styles.app}>
-        <SearchHeader />
+        <SearchHeader onSearch={search} />
         <VideoList videos={videos} />
       </div>
     </>
