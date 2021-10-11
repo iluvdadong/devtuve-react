@@ -19,7 +19,6 @@ const VideoDetail = ({ video, video: { snippet } }) => {
             <h1>{snippet.title}</h1>
             <h3>{snippet.channelTitle}</h3>
             <pre className={styles.description}>{snippet.description}</pre>
-
             </section>
         </>
     );

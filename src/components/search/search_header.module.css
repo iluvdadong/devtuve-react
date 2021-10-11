@@ -1,9 +1,9 @@
 .header {
     display: flex;
     height: 4rem; /* 부모와 상관없이 고정값 */
+    margin-top: 1.2em;
     padding: 0.5em 1em;
-    background: black;
-    color:white;
+    color: #444;
 
 }
 
@@ -21,12 +21,14 @@
     flex-basis: 100%;
     font-size:1.2rem;
     outline: 0;
+    border-radius: 0.4em;
     border: none;
     padding: 0.5em;
+    opacity: 0.6;
 }
 
 .button {
-    background: rgb(43, 43, 43);
+    padding-left:1em;
     border:none; 
     box-shadow:none; 
     border-radius:0;
@@ -34,6 +36,5 @@
 }
 
 .buttonImg {
-    padding: 0.5em;
     height: 100%;
 }

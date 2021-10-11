@@ -12,7 +12,6 @@ code {
     monospace;
 }
 
-
 *{
   box-sizing:border-box;
 }
@@ -20,4 +19,5 @@ code {
 #root {
   display: flex;
   justify-content: center;
+  background: #efefef;
 }

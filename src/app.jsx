@@ -36,10 +36,9 @@ function App({ youtube }) {
     <>
       <div className={styles.app}>
         <SearchHeader onSearch={search} onLogoClick={logoClick} />
-        <section className={styles.tag}>
+        <section className={styles.container}>
           <Button 
             label="Front-End"
-            stylesClass=""
             onClick={()=> {
               search('프론트엔드 개발');
             }}
@@ -47,7 +46,6 @@ function App({ youtube }) {
           />
           <Button 
             label="Back-End"
-            stylesClass=""
             onClick={()=> {
               search('백엔드 개발');
             }}
@@ -55,7 +53,6 @@ function App({ youtube }) {
           />
           <Button 
             label="iOS"
-            stylesClass=""
             onClick={()=> {
               search('iOS 개발');
             }}
@@ -63,7 +60,6 @@ function App({ youtube }) {
           />
          <Button 
             label="Android"
-            stylesClass=""
             onClick={()=> {
               search('안드로이드 개발');
             }}

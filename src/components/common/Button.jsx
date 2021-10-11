@@ -1,9 +1,10 @@
 import React from 'react';
+import styles from './Button.module.css'
 
 export default function (props) {
-  const { label, styleClass, onClick, disabled} = props;
+  const { label, onClick, disabled} = props;
   return (
-    <button className={styleClass} onClick={onClick} disabled={disabled}>
+    <button className={styles.button} onClick={onClick} disabled={disabled}>
           {label}
     </button>
   );

@@ -1,4 +1,5 @@
 import React, { useRef } from 'react';
+import { FaSearch } from "react-icons/fa";
 
 import styles from './search_header.module.css';
 
@@ -30,14 +31,10 @@ const SearchHeader = ({ onSearch, onLogoClick }) => {
                 ref={inputRef}
                 className={styles.input}
                 type="search"
-                placeholder="Search.."
+                placeholder="개발 관련 영상을 검색해주세요 :)"
                 onKeyPress={onKeydown} />
             <button className={styles.button} type="submit" onClick={onClick}>
-                <img
-                    className={styles.buttonImg}
-                    src="/images/search.png"
-                    alt="search"
-                />
+                <FaSearch size="lg" color="#444"/>
             </button>
         </header>
     );
