@@ -58,3 +58,12 @@
     font-weight: 400;
     margin-top: 0.5em;
 }
+
+@media screen and (max-width: 48rem) {
+    .container.grid {
+        width: 100%;
+    }
+    .container {
+        width: 100%;
+    }
+  }

@@ -13,3 +13,14 @@
 .list {
   flex: 1 1 30%;
 }
+
+/*
+  스크린의 크기가 780px / 16 => 48rem 이하면 
+  이미 display는 flex 로 .content에 되어 있으니깐
+  direction을 컬럼으로 적용하면 된다.
+*/
+@media screen and (max-width: 48rem) {
+  .content {
+    flex-direction: column;
+  }
+}
