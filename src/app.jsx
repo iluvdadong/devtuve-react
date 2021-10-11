@@ -8,6 +8,20 @@ import Button from './components/common/Button';
 function App({ youtube }) {
   const [videos, setVideos] = useState([]);
   const [selectedVideo, setSelectedVideo] = useState(null);
+  const searchData = [
+    "노마드코더",
+    "라메개발자",
+    "드림코딩앨리",
+    "김버그",
+    "승지니어",
+    "백기선",
+    "홍정모 연구소",
+  ];
+  
+  const randomSearchData = searchData => {
+    const random = Math.floor(Math.random() * searchData.length);
+    return searchData[random];
+  };
 
   const selectVideo = video => {
     setSelectedVideo(video);
@@ -15,6 +29,9 @@ function App({ youtube }) {
 
   const logoClick = () => {
     setSelectedVideo(null);
+    youtube
+     .search(randomSearchData(searchData))
+     .then(videos => setVideos(videos));
   }
 
   // Youtube class의 instance인 youtube 내부 API 함수 호출
@@ -28,7 +45,7 @@ function App({ youtube }) {
   //useEffect가 아니라 네트워킹하는 것을 함수로 만듬
   useEffect(() => {
     youtube
-      .mostPopular()
+      .search(randomSearchData(searchData))
       .then(videos => setVideos(videos));
   }, [youtube]);
 
@@ -62,6 +79,13 @@ function App({ youtube }) {
             label="Android"
             onClick={()=> {
               search('안드로이드 개발');
+            }}
+            disabled={false}
+          />
+          <Button 
+            label="DevOps"
+            onClick={()=> {
+              search('DevOps 데브옵스 개발');
             }}
             disabled={false}
           />

@@ -4,27 +4,13 @@ class Youtube {
         this.youtube = httpClient;
     }
 
-    async mostPopular() {
-        const response = await this.youtube.get('search', {
-            params: {
-                part: 'snippet',
-                maxResults: '30',
-                type: 'video',
-                q: 'IT트렌드',
-            }
-        });
-        return response.data.items.map(item => ({
-            ...item,
-            id: item.id.videoId // item.id.videoId 값을 그냥 item.id로 쉽게 미리 넣어줌
-        }))
-    }
-
     async search(query) {
         const response = await this.youtube.get('search', {
             params: {
                 part: 'snippet',
                 maxResults: '30',
                 q: query,
+                type: 'video',
             }
         });
         return response.data.items.map(item => ({
