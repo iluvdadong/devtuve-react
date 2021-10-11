@@ -1,6 +1,14 @@
 .container {
     width: 50%;
-    padding: 0.2em; 
+    padding: 0.8em; 
+}
+
+.container.grid {
+    width: 50%;
+}
+
+.container.list {
+    width: 100%;
 }
 
 .video {
@@ -8,10 +16,12 @@
     height: 100%;
     display: flex;
     align-items: center;
-    border: 0.2px solid lightgray;
-    box-shadow: 7px 4px 32px 4px rgba(99, 99, 99, 0.1);
     cursor: pointer;
     transition: transform 250ms ease-in;
+    border-radius: 12px;
+    background: #ffffff;
+    box-shadow:  10px 10px 34px #cfcfcf,
+             -10px -10px 34px #ffffff;
 }
 
 /* .video classNmae을 가진 것에 hover시*/
@@ -19,12 +29,20 @@
     transform: scale(1.03);
 }
 
+/* .thumbnail_card {
+    width: 120px;
+    height: 90px;
+    overflow: hidden;
+} */
+
 .thumbnail {
     width: 40%;
     height: 100%;
+    border-radius: 12px 0px 0px 12px;
 }
 
 .metadata {
+    
     margin-left :0.6em;
 }
 

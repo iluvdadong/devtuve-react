@@ -12,11 +12,17 @@ function App({ youtube }) {
     setSelectedVideo(video);
   }
 
+  const logoClick = () => {
+    setSelectedVideo(null);
+  }
+
   // Youtube class의 instance인 youtube 내부 API 함수 호출
   const search = query => {
     youtube
       .search(query)
       .then(videos => setVideos(videos));
+
+    setSelectedVideo(null);
   };
 
   //useEffect가 아니라 네트워킹하는 것을 함수로 만듬
@@ -29,7 +35,10 @@ function App({ youtube }) {
   return (
     <>
       <div className={styles.app}>
-        <SearchHeader onSearch={search} />
+        <SearchHeader onSearch={search} onLogoClick={logoClick} />
+        <section>
+          <h1>ㅠ</h1>
+        </section>
         <section className={styles.content}>
           {selectedVideo && (
             <div className={styles.detail}>
