@@ -7,6 +7,7 @@ const VideoDetail = ({ video, video: { snippet } }) => {
         <>
             <section className={styles.detail}>
             <iframe 
+                title="youtubue video"
                 className={styles.video}
                 type="text/html"
                 width="100%"

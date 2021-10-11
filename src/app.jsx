@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import styles from './app.module.css';
 import SearchHeader from './components/search/search_header';
 import VideoList from './components/video_list/video_list';
@@ -17,20 +17,20 @@ function App({ youtube }) {
   }
 
   // Youtube class의 instance인 youtube 내부 API 함수 호출
-  const search = query => {
+  const search = useCallback(query => {
+    setSelectedVideo(null);
     youtube
       .search(query)
       .then(videos => setVideos(videos));
-
-    setSelectedVideo(null);
-  };
+    },[youtube]
+  );
 
   //useEffect가 아니라 네트워킹하는 것을 함수로 만듬
   useEffect(() => {
     youtube
       .mostPopular()
       .then(videos => setVideos(videos));
-  }, []);
+  }, [youtube]);
 
   return (
     <>
