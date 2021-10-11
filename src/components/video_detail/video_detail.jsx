@@ -12,7 +12,7 @@ const VideoDetail = ({ video, video: { snippet } }) => {
                 type="text/html"
                 width="100%"
                 height="500px"
-                src={`https://www.youtube.com/embed/${video.id.videoId}`}
+                src={`https://www.youtube.com/embed/${video.id}`}
                 frameBorder="0"
                 allowFullScreen
             ></iframe>

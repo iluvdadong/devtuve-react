@@ -38,10 +38,34 @@ function App({ youtube }) {
         <SearchHeader onSearch={search} onLogoClick={logoClick} />
         <section className={styles.tag}>
           <Button 
-            label="프론트엔드"
+            label="Front-End"
             stylesClass=""
             onClick={()=> {
-              alert('클릭됐다!');
+              search('프론트엔드 개발');
+            }}
+            disabled={false}
+          />
+          <Button 
+            label="Back-End"
+            stylesClass=""
+            onClick={()=> {
+              search('백엔드 개발');
+            }}
+            disabled={false}
+          />
+          <Button 
+            label="iOS"
+            stylesClass=""
+            onClick={()=> {
+              search('iOS 개발');
+            }}
+            disabled={false}
+          />
+         <Button 
+            label="Android"
+            stylesClass=""
+            onClick={()=> {
+              search('안드로이드 개발');
             }}
             disabled={false}
           />

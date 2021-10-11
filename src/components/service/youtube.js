@@ -13,7 +13,10 @@ class Youtube {
                 q: 'IT트렌드',
             }
         });
-        return response.data.items;
+        return response.data.items.map(item => ({
+            ...item,
+            id: item.id.videoId // item.id.videoId 값을 그냥 item.id로 쉽게 미리 넣어줌
+        }))
     }
 
     async search(query) {
