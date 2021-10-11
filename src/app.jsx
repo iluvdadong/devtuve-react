@@ -3,6 +3,7 @@ import styles from './app.module.css';
 import SearchHeader from './components/search/search_header';
 import VideoList from './components/video_list/video_list';
 import VideoDetail from './components/video_detail/video_detail';
+import Button from './components/common/Button';
 
 function App({ youtube }) {
   const [videos, setVideos] = useState([]);
@@ -35,8 +36,15 @@ function App({ youtube }) {
     <>
       <div className={styles.app}>
         <SearchHeader onSearch={search} onLogoClick={logoClick} />
-        <section>
-          <h1>ㅠ</h1>
+        <section className={styles.tag}>
+          <Button 
+            label="프론트엔드"
+            stylesClass=""
+            onClick={()=> {
+              alert('클릭됐다!');
+            }}
+            disabled={false}
+          />
         </section>
         <section className={styles.content}>
           {selectedVideo && (

@@ -14,6 +14,9 @@
   flex: 1 1 30%;
 }
 
+.tag {
+  display: flex;
+}
 /*
   스크린의 크기가 780px / 16 => 48rem 이하면 
   이미 display는 flex 로 .content에 되어 있으니깐
