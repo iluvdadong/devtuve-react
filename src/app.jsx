@@ -17,13 +17,12 @@ function App({ youtube }) {
   }
 
   // Youtube class의 instance인 youtube 내부 API 함수 호출
-  const search = useCallback(query => {
+  const search = query => {
     setSelectedVideo(null);
-    youtube
-      .search(query)
-      .then(videos => setVideos(videos));
-    },[youtube]
-  );
+      youtube
+        .search(query)
+        .then(videos => setVideos(videos));
+  };
 
   //useEffect가 아니라 네트워킹하는 것을 함수로 만듬
   useEffect(() => {
