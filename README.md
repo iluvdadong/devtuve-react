@@ -57,3 +57,4 @@ Video Web Service for those who want to stop getting distracted by and wasting t
 ## Deploy
 [https://charlie-devtube.netlify.app/](https://charlie-devtube.netlify.app/)
 * 정해진 무료 Youtube API 호출 수로 인해 특정 트래픽을 초과하면 API 오류가 발생하여 웹사이트가 정상작동 하지 않을 때가 있습니다. 위 캡쳐본을 확인해주시길 부탁 드립니다.
+* 배포 과정 중 겪었던 오류 해결과정 [바로가기](https://kimcomdong.tistory.com/entry/Deploy우여곡절-많은-React-netlify-배포-Page-Not-Found-와-Deploy-Failed의-향연)
