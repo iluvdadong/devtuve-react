@@ -1,4 +1,6 @@
-# Youtube Clone Project (React) ver.1.0
+# DevTube ver.1.0
+Youtube Clone Project(React.js)
+[DevTube](https://charlie-devtube.netlify.app)
 
 ## Introduction
 
@@ -17,17 +19,27 @@
 
 1. 랜덤으로 개발 관련 검색 키워드로 영상을 뿌려주는 메인 페이지
 
+![react](public/images/1.png)
+
 
 2. 원하는 개발 키워드로 쉽게 검색할 수 있는 태그
+
+![react](public/images/2.png)
 
 
 3. 검색
 
+![react](public/images/3.png)
+
 
 4. 상세페이지
 
+![react](public/images/4.png)
+
 
 5. 반응형 지원
+
+<img src="public/images/5.png" width="60%" height="30%" alt="responsive"></img>
 
 
 * React Hook
