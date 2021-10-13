@@ -1,8 +1,12 @@
-# Youtube Clone Project (React) ver.1.0
+# DevTube ver.1.0
+Youtube Clone Project(React.js)
+[DevTube](https://charlie-devtube.netlify.app)
 
 ## Introduction
 
 개발 정보를 얻기 위해 유튜브에 접속하지만, 다른 매력적인 영상 추천으로 유혹당해 시간을 낭비하는 일을 방지하기 위해 만든 웹 서비스입니다. 유튜브 API를 연동하여 개발 관련 영상을 보여주고, 키워드 검색 및 비디오 재생 기능이 있는 상세페이지를 개발하였습니다.
+
+Video Web Service for those who want to stop getting distracted by and wasting time watching recommended videos from youtube. It will help you to watch only videos related to software development.
 
 ## Tech Stack
 
@@ -17,17 +21,27 @@
 
 1. 랜덤으로 개발 관련 검색 키워드로 영상을 뿌려주는 메인 페이지
 
+![react](public/images/1.png)
+
 
 2. 원하는 개발 키워드로 쉽게 검색할 수 있는 태그
+
+![react](public/images/2.png)
 
 
 3. 검색
 
+![react](public/images/3.png)
+
 
 4. 상세페이지
 
+![react](public/images/4.png)
+
 
 5. 반응형 지원
+
+<img src="public/images/5.png" width="60%" height="30%" alt="responsive"></img>
 
 
 * React Hook
@@ -38,3 +52,9 @@
 * Axios
 * Dependency Injection
 * Deploy Using Netlify
+
+
+## Deploy
+[https://charlie-devtube.netlify.app/](https://charlie-devtube.netlify.app/)
+* 정해진 무료 Youtube API 호출 수로 인해 특정 트래픽을 초과하면 API 오류가 발생하여 웹사이트가 정상작동 하지 않을 때가 있습니다. 위 캡쳐본을 확인해주시길 부탁 드립니다.
+* 배포 과정 중 겪었던 오류 해결과정 [바로가기](https://kimcomdong.tistory.com/entry/Deploy우여곡절-많은-React-netlify-배포-Page-Not-Found-와-Deploy-Failed의-향연)
