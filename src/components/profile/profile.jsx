@@ -6,7 +6,7 @@ const Profile = (props) => {
     <>
       <Button
         label="Home버튼"
-        onClick={alert("button clicked!")}
+        onClick={() => alert("button clicked!")}
         disabled={false}
       />
     </>
