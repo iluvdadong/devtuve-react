@@ -7,11 +7,11 @@ function App({ youtube }) {
     <>
       <BrowserRouter>
         <Switch>
+          <Route path={["/", "/home"]}>
+            <Home youtube={youtube} />
+          </Route>
           <Route path="/profile">
             <Profile />
-          </Route>
-          <Route path="/home">
-            <Home youtube={youtube} />
           </Route>
         </Switch>
       </BrowserRouter>
